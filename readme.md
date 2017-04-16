@@ -2,7 +2,7 @@ Original Tetris simulation code is provided by the NUS CS3243 module project.
 
 PlayerSkeleton has been edited to implement a utility-based Tetris agent.
 
-Details on the implementation can be found <a href="/project_report">here</a>.
+Details on the implementation can be found <a href="/project_report.pdf">here</a>.
 <hr>
 
 This is a basic Tetris simulation.
