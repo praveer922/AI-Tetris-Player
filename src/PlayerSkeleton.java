@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class PlayerSkeleton {
 
     // *** Paste weights here
-     //double[] weights = {-0.08075476343626997,0.06512710745251571,0.026528301544375688,0.9841333927818585,-0.529638056344585,-0.1136445616744991,-0.27466748067531854};
-    double[] weights = { -1, 1, 1, 1, -1, -1, -1 };
+     double[] weights = {-0.08075476343626997,0.06512710745251571,0.026528301544375688,0.9841333927818585,-0.529638056344585,-0.1136445616744991,-0.27466748067531854};
+    //double[] weights = { -1, 1, 1, 1, -1, -1, -1 };
     static int numOfGames = 100;
 
     // implement this function to have a working system
@@ -89,16 +89,15 @@ public class PlayerSkeleton {
 	for (int i = 0; i < numOfGames; i++) {
 
 	    State s = new State();
-	    // new TFrame(s);
+	    TFrame frame = new TFrame(s);
 	    PlayerSkeleton p = new PlayerSkeleton();
 	    while (!s.hasLost()) {
 		s.makeMove(p.pickMove(s, s.legalMoves()));
-		/*
-		 * s.draw(); s.drawNext(0, 0); try { Thread.sleep(300); } catch
-		 * (InterruptedException e) { e.printStackTrace(); }
-		 */
+		 s.draw(); s.drawNext(0, 0); try { Thread.sleep(50); } catch
+		 (InterruptedException e) { e.printStackTrace(); }
 	    }
 	    System.out.print(s.getRowsCleared() + ", ");
+	    frame.dispose();
 	}
     }
 }
